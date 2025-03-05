@@ -32,9 +32,12 @@ This is a shell script that automates running the `port_scanner.py` Python scrip
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/NetProbe.git
+   ```
+2. **Navigate to the Directory**:
+   ```bash
    cd NetProbe
    ```
-2. **Make the shell script executable**:
+3. **Make the shell script executable**:
    ```bash
    chmod +x run
    ```
