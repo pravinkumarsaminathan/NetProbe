@@ -41,6 +41,10 @@ This is a shell script that automates running the `port_scanner.py` Python scrip
    ```bash
    chmod +x run
    ```
+4. **Then simply run**:
+   ```bash
+   ./run
+   ```
 ## Contributing
 If you have any ideas for improvements or if you've found a bug, please open an issue or submit a pull request. Contributions are always welcome!
 
