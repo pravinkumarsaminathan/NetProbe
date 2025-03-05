@@ -38,3 +38,8 @@ This is a shell script that automates running the `port_scanner.py` Python scrip
    ```bash
    chmod +x run
    ```
+## Contributing
+If you have any ideas for improvements or if you've found a bug, please open an issue or submit a pull request. Contributions are always welcome!
+
+## License
+This project is licensed under the MIT License. See the [Apache-2.0 license](LICENSE) file for more details.
