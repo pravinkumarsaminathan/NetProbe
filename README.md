@@ -22,7 +22,7 @@ To install Python 3, follow the instructions for your operating system:
 ### 1. `port_scanner.py`
 This Python script contains the core logic of the **NetProbe** tool. It scans the specified network for open ports and vulnerabilities.
 
-### 2. `run.sh`
+### 2. `run`
 This is a shell script that automates running the `port_scanner.py` Python script. It provides an easy way to execute the port scanner without manually entering Python commands.
 
 ---
