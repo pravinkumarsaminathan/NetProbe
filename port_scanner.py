@@ -1,5 +1,6 @@
 import socket
 import threading
+import concurrent.futures
 
 BLUE, RED, WHITE, YELLOW, MAGENTA, GREEN, END = '\33[1;94m', '\033[1;91m', '\33[1;97m', '\33[1;93m', '\033[1;35m', '\033[1;32m', '\033[0m'
 
@@ -12,23 +13,18 @@ def scan_port(ip, port):
         try:
             service = socket.getservbyport(port)
         except:
-            service = RED+"Unknown service"+MAGENTA
+            service = RED + "Unknown service" + END
         print("Port " + GREEN + f"{port} " + END + "is open " + MAGENTA + f"({service})" + END)
     except:
         pass
     finally:
         s.close()
 
-# Function to scan a range of ports
+# Function to scan a range of ports using a thread pool
 def scan_ports(ip, start_port, end_port):
-    threads = []
-    for port in range(start_port, end_port + 1):
-        thread = threading.Thread(target=scan_port, args=(ip, port))
-        threads.append(thread)
-        thread.start()
-
-    for thread in threads:
-        thread.join()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
+        futures = [executor.submit(scan_port, ip, port) for port in range(start_port, end_port + 1)]
+        concurrent.futures.wait(futures)
 
 if __name__ == "__main__":
     url = "https://pravin.site"
