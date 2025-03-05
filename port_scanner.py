@@ -22,7 +22,7 @@ def scan_port(ip, port):
 
 # Function to scan a range of ports using a thread pool
 def scan_ports(ip, start_port, end_port):
-    with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1000) as executor:
         futures = [executor.submit(scan_port, ip, port) for port in range(start_port, end_port + 1)]
         concurrent.futures.wait(futures)
 
