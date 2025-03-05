@@ -2,6 +2,7 @@
 
 **NetProbe** is a simple yet powerful network scanning tool designed to detect open ports and identify vulnerabilities on networked devices. It helps network administrators monitor and secure their networks efficiently.
 
+![NetProbe](sample.png)
 ---
 
 ## Requirements
