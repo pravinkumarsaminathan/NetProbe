@@ -31,7 +31,7 @@ This is a shell script that automates running the `port_scanner.py` Python scrip
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/NetProbe.git
+   git clone https://github.com/pravinkumarsaminathan/NetProbe.git
    ```
 2. **Navigate to the Directory**:
    ```bash
