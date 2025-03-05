@@ -49,3 +49,4 @@ if __name__ == "__main__":
     end_port = int(input(YELLOW + "Enter the end port: " + END))
     print("\n")
     scan_ports(target_ip, start_port, end_port)
+    print("\n")
